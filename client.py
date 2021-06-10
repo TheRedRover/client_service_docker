@@ -16,9 +16,9 @@ client_port = None
 L = 0
 while True:
     try:
-        server_host = os.environ["EYE_SERVICE_HOST"]
-        server_port = os.environ["EYE_SERVICE_PORT"]
-        client_port = os.environ["EAR_SERVICE_PORT"]
+        server_host = os.environ["SERVER_SERVICE_HOST"]
+        server_port = os.environ["CLIENT_SERVICE_PORT"]
+        client_port = os.environ["CLIENT_SERVICE_PORT"]
         break
     except KeyError:
         log(f"Try env #{L}")
