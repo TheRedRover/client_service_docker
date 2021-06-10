@@ -50,7 +50,8 @@ while True:
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    sock.bind(self_address)    sock.listen(10)
+    sock.bind(self_address)
+    sock.listen(10)
     conn, addr = sock.accept()  # blocking
     data = conn.recv(512)
     log(data.decode())
